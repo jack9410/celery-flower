@@ -16,7 +16,6 @@ help:
 
 build: clean
 	docker-compose build
-	docker-compose -f docker-compose.test.yml build
 
 up:
 	docker-compose up
