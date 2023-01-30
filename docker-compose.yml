@@ -1,0 +1,15 @@
+version: '3.7'
+
+services:
+  app:
+    build: .
+    command:
+    environment:
+    depends_on:
+      - redis
+    ports:
+
+  redis:
+    image: redis:4-alpine
+    ports:
+      -6379:6379
