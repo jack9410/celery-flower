@@ -1,5 +1,5 @@
 help:
-	@echo 'Management commands for postbacksvc:'
+	@echo 'Management commands for Celery-flower'
 	@echo ''
 	@echo 'Usage:'
 	@echo '    make build           Compile the project.'
