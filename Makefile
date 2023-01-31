@@ -14,8 +14,11 @@ help:
 	@echo '    make clean           Clean up project.'
 	@echo
 
-build:
+build: clean
 	docker-compose build
 
 up:
 	docker-compose up
+
+clean:
+	docker-compose down
