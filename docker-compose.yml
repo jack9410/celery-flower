@@ -1,0 +1,17 @@
+version: '3.7'
+
+services:
+  worker:
+    build: .
+    command: >
+      celery -A tasks worker --loglevel=INFO
+    # environment:
+    depends_on:
+      - redis
+    ports:
+      - 9000:9000
+
+  redis:
+    image: redis:4-alpine
+    ports:
+      - 6379:6379
