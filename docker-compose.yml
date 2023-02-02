@@ -15,3 +15,12 @@ services:
     image: redis:4-alpine
     ports:
       - 6379:6379
+  
+  flower:
+    build: ./
+    command: celery -A tasks flower
+    ports:
+      - 5555:5555
+    depends_on:
+      - worker
+      - redis
